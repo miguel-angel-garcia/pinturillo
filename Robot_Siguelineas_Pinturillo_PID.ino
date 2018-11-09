@@ -6,7 +6,7 @@
  * 4.- El led parpadea 3 veces (0,5 segundos cada parpadeo)
  * 5.- Espera 1 segundo y calibra a NEGRO
  * 6.- El led parpacea 5 veces y finaliza la calibración
- * 7.- Espera 3 segundos 
+ * 7.- Espera 1 segundo
  */
 
 #include <Servo.h>
@@ -39,8 +39,8 @@ Servo brazos;
 #define MAX_BRAZOS_IZQ 135
 #define MAX_BRAZOS_DER 45
 // Parámetros PID
-#define Kp 1 // experiment to determine this, start by something small that just makes your bot follow the line at a slow speed
-#define Kd 40// experiment to determine this, slowly increase the speeds and adjust this value. ( Note: Kp < Kd) 
+#define Kp 0.08 // Ajustar en función de la velocidad máxima
+#define Kd 3 // Ajustar (pero siempre Kp < Kd) 
 
 
 // Constantes
